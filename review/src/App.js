@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const App = ()=> {
+
     return(<div className="App component">
         <h1>Main App</h1>
         <SubComp1 />
@@ -17,6 +19,7 @@ const SubComp1 = ()=> {
 const SubComp2 = ()=> {
     return(<div className="component">
         <h2>Sub Component 2</h2>
+        <SubComp3 />
     </div>);
 }
 
