@@ -14,7 +14,7 @@ const App = ()=> {
 };
 
 const SubComp1 = (props)=> {
-    const { person } = props;
+    const { person, setPerson } = props;
 
     return(<div className="component">
         <h2>Sub Component 1</h2>
@@ -25,12 +25,12 @@ const SubComp1 = (props)=> {
 }
 
 const SubComp2 = (props)=> {
-    const { person } = props;
+    const { person, setPerson } = props;
 
     return(<div className="component">
         <h2>Sub Component 2</h2>
         <h3>Location: {person.location.street} {person.location.city}, {person.location.state}</h3>
-        {/* <SubComp3 /> */}
+        <SubComp3 person={person} setPerson={setPerson}/>
     </div>);
 }
 
