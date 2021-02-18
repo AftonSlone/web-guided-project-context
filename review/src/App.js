@@ -37,13 +37,24 @@ const SubComp2 = (props)=> {
 const SubComp3 = (props)=> {
     const {person, setPerson} = props;
 
-    const changeLocation = ()=>{
+    const changeLocation = () =>{
         setPerson({
             ...person,
             location: {
                 street: '2323 N 23rd street',
                 city: 'Philadelphia',
                 state: 'PA'
+            }
+        });
+    }
+
+    const changeName = () => {
+        setPerson({
+            ...person,
+            name: {
+                title: "mx",
+                first: "I",
+                last: "You"
             }
         });
     }
