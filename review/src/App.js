@@ -13,9 +13,9 @@ const App = ()=> {
             <SubComp1/>
         </PersonContext.Provider>
 
-        <DogContext.Provider value={dog}>
+        {/* <DogContext.Provider value={dog}>
             <SubComp1/>
-        </DogContext.Provider>
+        </DogContext.Provider> */}
     </div>);
 };
 
@@ -32,11 +32,9 @@ const SubComp1 = ()=> {
 
 const SubComp2 = ()=> {
     const { person } = useContext(PersonContext);
-    const dog = useContext(DogContext);
-
+    
     return(<div className="component">
         <h2>Sub Component 2</h2>
-        <h3>Dog: {dog.name} {dog.breed}</h3>
         <h3>Location: {person.location.street} {person.location.city}, {person.location.state}</h3>
         <SubComp3/>
     </div>);
