@@ -27,6 +27,7 @@ const SubComp1 = (props)=> {
 const SubComp2 = ()=> {
     return(<div className="component">
         <h2>Sub Component 2</h2>
+        <h3>Location: {}</h3>
         <SubComp3 />
     </div>);
 }
