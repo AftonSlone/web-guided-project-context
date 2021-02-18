@@ -51,7 +51,7 @@ const SubComp3 = (props)=> {
     return(<div className="component">
         <h2>Sub Component 3</h2>
         <button onClick={changeLocation}>Change Location</button>
-        {/* <button onClick={changeName}>Change Name</button> */}
+        <button onClick={changeName}>Change Name</button>
     </div>);
 }
 
