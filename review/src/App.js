@@ -10,8 +10,9 @@ const App = ()=> {
     return(<div className="App component">
         <h1>Main App</h1>
         <PersonContext.Provider value={{person, setPerson}}>
-            <DogContext.Provider value={{name: "fido", breed: "boxer"}}
-            <SubComp1/>
+            <DogContext.Provider value={{name: "fido", breed: "boxer"}}>
+                <SubComp1/>
+            </DogContext.Provider>
         </PersonContext.Provider>
     </div>);
 };
@@ -29,9 +30,11 @@ const SubComp1 = ()=> {
 
 const SubComp2 = ()=> {
     const { person } = useContext(PersonContext);
+    const dog = useContext(DogContext);
 
     return(<div className="component">
         <h2>Sub Component 2</h2>
+        <h3>Dog: {dog.name} {dog.breed}</h3>
         <h3>Location: {person.location.street} {person.location.city}, {person.location.state}</h3>
         <SubComp3/>
     </div>);
