@@ -1,11 +1,12 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, useReducer, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
 const DogContext = createContext();
 
 const App = ()=> {
-    const [person, setPerson ] = useState(data);
+    // const [person, setPerson ] = useState(data);
+    const 
 
     return(<div className="App component">
         <h1>Main App</h1>
