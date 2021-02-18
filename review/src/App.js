@@ -45,7 +45,7 @@ const SubComp2 = ()=> {
 }
 
 const SubComp3 = ()=> {
-    const {person, setPerson} = useContext(PersonContext);
+    const {dispatch} = useContext(PersonContext);
 
     const changeLocation = () =>{
         setPerson({
