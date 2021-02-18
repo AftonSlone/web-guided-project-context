@@ -31,12 +31,12 @@ const SubComp2 = ()=> {
     return(<div className="component">
         <h2>Sub Component 2</h2>
         <h3>Location: {person.location.street} {person.location.city}, {person.location.state}</h3>
-        <SubComp3 person={person} setPerson={setPerson}/>
+        <SubComp3/>
     </div>);
 }
 
-const SubComp3 = (props)=> {
-    const {person, setPerson} = props;
+const SubComp3 = ()=> {
+    const [person, setPerson] = useContext(PersonContext);
 
     const changeLocation = () =>{
         setPerson({
