@@ -8,14 +8,14 @@ const App = ()=> {
 
     return(<div className="App component">
         <h1>Main App</h1>
-        <PersonContext.Provider value={[person, setPerson, "This is a random string"]}>
+        <PersonContext.Provider value={{person:person, setPerson:setPerson}}>
             <SubComp1/>
         </PersonContext.Provider>
     </div>);
 };
 
 const SubComp1 = ()=> {
-    const [ person, setPerson, randomString] = useContext(PersonContext);
+    const { person } = useContext(PersonContext);
 
     return(<div className="component">
         <h2>Sub Component 1 : {randomString}</h2>
@@ -26,7 +26,7 @@ const SubComp1 = ()=> {
 }
 
 const SubComp2 = ()=> {
-    const [ person ] = useContext(PersonContext);
+    const { person } = useContext(PersonContext);
 
     return(<div className="component">
         <h2>Sub Component 2</h2>
