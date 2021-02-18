@@ -18,7 +18,7 @@ const SubComp1 = ()=> {
     const { person } = useContext(PersonContext);
 
     return(<div className="component">
-        <h2>Sub Component 1 : {randomString}</h2>
+        <h2>Sub Component 1</h2>
         <h3>Name: {person.name.title} {person.name.first} {person.name.last}</h3>
 
         <SubComp2 />
@@ -36,7 +36,7 @@ const SubComp2 = ()=> {
 }
 
 const SubComp3 = ()=> {
-    const [person, setPerson] = useContext(PersonContext);
+    const {person, setPerson} = useContext(PersonContext);
 
     const changeLocation = () =>{
         setPerson({
