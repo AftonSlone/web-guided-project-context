@@ -6,16 +6,17 @@ const App = ()=> {
     const [person, setPerson ] = useState(data);
 
     console.log(person);
-    
+
     return(<div className="App component">
         <h1>Main App</h1>
-        <SubComp1 />
+        <SubComp1 person={person} setPerson={setPerson}/>
     </div>);
 };
 
 const SubComp1 = ()=> {
     return(<div className="component">
         <h2>Sub Component 1</h2>
+        <h3>Name: {person.name.title} </h3>
         <SubComp2/>
     </div>);
 }
