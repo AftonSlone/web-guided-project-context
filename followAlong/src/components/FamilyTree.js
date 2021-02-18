@@ -6,7 +6,7 @@ import Siblings from "./Siblings";
 import FamilyContext from "./../contexts/FamilyContext";
 
 export default function FamilyTree(props) {
-  // const activeFamily = useContext(FamilyContext);
+  const activeFamily = useContext(FamilyContext);
 
   return (
     <section className="FamilyTree">
@@ -28,10 +28,9 @@ export default function FamilyTree(props) {
               </div>
             );
           }
-        }
-        
-        
+        }      
       </FamilyContext.Consumer>
+      
     </section>
   );
 }
