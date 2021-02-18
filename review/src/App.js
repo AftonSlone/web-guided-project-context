@@ -13,11 +13,14 @@ const App = ()=> {
     </div>);
 };
 
-const SubComp1 = ()=> {
+const SubComp1 = (props)=> {
+    const { person } = props;
+
     return(<div className="component">
         <h2>Sub Component 1</h2>
-        <h3>Name: {person.name.title} </h3>
-        <SubComp2/>
+        <h3>Name: {person.name.title} {person.name.first} {person.name.last}</h3>
+
+        <SubComp2 person={person} setPerson={setPerson}/>
     </div>);
 }
 
