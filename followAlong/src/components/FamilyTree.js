@@ -13,7 +13,6 @@ export default function FamilyTree(props) {
       <h1>{activeFamily.familyName}</h1>
       <h2>Parents</h2>
 
-      {/* Pass data down as a prop */}
       <Parents family={activeFamily} />
 
       <div className="spacer" />
