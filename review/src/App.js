@@ -51,16 +51,9 @@ const SubComp3 = ()=> {
         dispatch(setLocation('2222 2nd Street', 'Philadelphia', 'PA'));
     }
 
-    // const changeName = () => {
-    //     setPerson({
-    //         ...person,
-    //         name: {
-    //             title: "mx",
-    //             first: "I",
-    //             last: "You"
-    //         }
-    //     });
-    // }
+    const changeName = () => {
+        dispatch(setName())
+    }
 
     return(<div className="component">
         <h2>Sub Component 3</h2>
