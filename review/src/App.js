@@ -10,6 +10,7 @@ const App = ()=> {
     return(<div className="App component">
         <h1>Main App</h1>
         <PersonContext.Provider value={{person, setPerson}}>
+            <DogContext.Provider value={{name: "fido", breed: "boxer"}}
             <SubComp1/>
         </PersonContext.Provider>
     </div>);
