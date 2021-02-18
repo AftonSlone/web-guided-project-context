@@ -38,15 +38,20 @@ const SubComp3 = (props)=> {
     const {person, setPerson} = props;
 
     const changeLocation = ()=>{
-        setPerson(
-            ...person
-        );
+        setPerson({
+            ...person,
+            location: {
+                street: '2323 N 23rd street',
+                city: 'Philadelphia',
+                state: 'PA'
+            }
+        });
     }
 
     return(<div className="component">
         <h2>Sub Component 3</h2>
         <button onClick={changeLocation}>Change Location</button>
-        <button onClick={changeName}>Change Name</button>
+        {/* <button onClick={changeName}>Change Name</button> */}
     </div>);
 }
 
