@@ -34,9 +34,13 @@ const SubComp2 = (props)=> {
     </div>);
 }
 
-const SubComp3 = ()=> {
+const SubComp3 = (props)=> {
+    const {setPerson} = props;
+
     return(<div className="component">
         <h2>Sub Component 3</h2>
+        <button>Change Location</button>
+        <button>Change Name</button>
     </div>);
 }
 
