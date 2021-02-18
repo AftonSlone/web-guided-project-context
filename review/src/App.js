@@ -48,31 +48,24 @@ const SubComp3 = ()=> {
     const {dispatch} = useContext(PersonContext);
 
     const changeLocation = () =>{
-        setPerson({
-            ...person,
-            location: {
-                street: '2323 N 23rd street',
-                city: 'Philadelphia',
-                state: 'PA'
-            }
-        });
+        dispatch(setLocation('2222 2nd Street', 'Philadelphia', 'PA'));
     }
 
-    const changeName = () => {
-        setPerson({
-            ...person,
-            name: {
-                title: "mx",
-                first: "I",
-                last: "You"
-            }
-        });
-    }
+    // const changeName = () => {
+    //     setPerson({
+    //         ...person,
+    //         name: {
+    //             title: "mx",
+    //             first: "I",
+    //             last: "You"
+    //         }
+    //     });
+    // }
 
     return(<div className="component">
         <h2>Sub Component 3</h2>
         <button onClick={changeLocation}>Change Location</button>
-        <button onClick={changeName}>Change Name</button>
+        {/* <button onClick={changeName}>Change Name</button> */}
     </div>);
 }
 
