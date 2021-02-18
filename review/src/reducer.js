@@ -11,9 +11,7 @@ export const setLocation = (street, city, state) => {
     return({type:SET_LOCATION, payload:{street, city, state}});
 }
 
-export const initialState = {
-    person:data
-}
+export const initialState = data;
 
 export const reducer = (state, action)=>{
     switch(action.type) {

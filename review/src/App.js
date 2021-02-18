@@ -8,7 +8,7 @@ const DogContext = createContext();
 
 const App = ()=> {
     // const [person, setPerson ] = useState(data);
-    const 
+    const [person, dispatch] = useReducer(reducer, initialState);
 
     return(<div className="App component">
         <h1>Main App</h1>
