@@ -10,15 +10,28 @@ export default function FamilyTree(props) {
 
   return (
     <section className="FamilyTree">
-      <h1>{activeFamily.familyName}</h1>
-      <h2>Parents</h2>
+      
+      <FamilyContext.Consumer>
+        {
+          (activeFamily) => {
+            return(
+              <div>
+                <h1>{activeFamily.familyName}</h1>
+                <h2>Parents</h2>
+        
+                <Parents family={activeFamily} />
 
-      <Parents family={activeFamily} />
+                <div className="spacer" />
+                <h2>Siblings</h2>
 
-      <div className="spacer" />
-      <h2>Siblings</h2>
-
-      <Siblings family={activeFamily} />
+                <Siblings family={activeFamily} />
+              </div>
+            );
+          }
+        }
+        
+        
+      </FamilyContext.Consumer>
     </section>
   );
 }
