@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from "react";
 
-const Parents = props => {
+import { FamilyContext } from "./../App";
+
+const Parents = (props) => {
+  const family = useContext(FamilyContext);
   return (
     <section className="parents">
-      {props.family.parents.map(p => (
+      {family.parents.map((p) => (
         <div className="person" key={p.name}>
           <img width="150" src={p.img} alt={p.name} />
           <strong>{p.name}</strong>
